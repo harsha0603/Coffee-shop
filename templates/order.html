@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='order.css') }}">
+    <title>Place Order</title>
+</head>
+<body>
+    <h1>Place Order</h1>
+
+    <form method="post" action="{{ url_for('order', item_id=menu_item[0]) }}">
+        <label for="customer_name">Customer Name:</label>
+        <input type="text" name="customer_name" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" required min="1" value="1">
+
+        <input type="submit" value="Place Order">
+    </form>
+
+    <p><a href="{{ url_for('menu') }}">Back to Menu</a></p>
+</body>
+</html>

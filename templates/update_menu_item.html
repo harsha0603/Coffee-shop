@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='update.css') }}">
+    <title>Update Menu Item</title>
+</head>
+<body>
+    <h1>Update Menu Item</h1>
+    <section>
+    <form method="post" action="{{ url_for('update_menu_item', item_id=item[0]) }}">
+        <label for="updated_name">Updated Item Name:</label>
+        <input type="text" name="updated_name" value="{{ item[1] }}" required><br>
+
+        <label for="updated_price">Updated Item Price:</label>
+        <input type="text" name="updated_price" value="{{ item[2] }}" required><br>
+
+        <button type="submit">Update Item</button>
+    </form>
+</section>
+</body>
+</html>

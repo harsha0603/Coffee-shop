@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='add.css') }}">
+    <title>Add Menu Item</title>
+</head>
+<body>
+    <h1>Add New Menu Item</h1>
+    <form method="post" action="{{ url_for('add_menu_item') }}">
+        <label for="item_name">Item Name:</label>
+        <input type="text" name="item_name" required><br>
+
+        <label for="item_price">Item Price:</label>
+        <input type="text" name="item_price" required><br>
+
+        <input type="submit" value="Add Item">
+    </form>
+    
+</body>
+</html>
+    

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Brewed Bliss</title>
+</head>
+
+
+<body>
+    <header>
+        <h1><i class='bx bx-coffee'></i>Brewed Bliss<a href="{{ url_for('login') }}">
+            <button class="button"
+                    style="padding: 10px; background-color: rgb(175, 139, 92); color: white; float: right; margin-right: 50px; border: none; border-radius: 10px; font-weight: 700;"
+                    onmouseover="this.style.backgroundColor='#9b7758';"
+                    onmouseout="this.style.backgroundColor='rgb(175, 139, 92)';">
+                Login
+            </button>
+        </a>
+        
+        
+        </h1>
+    </header>
+    <img style="float: right; margin-right: 150px;" src="/static/coffee.gif" alt="">
+    <section class="home">
+
+        <h2>Welcome to Brewed Bliss!</h2>
+        <p style="font-size: 25px;">Savor the Moment, Brewed to Perfection. <br>Your Daily Dose of Euphoria Awaits!</p>
+        <br>
+        <a href="{{ url_for('menu') }}">Place Order</a>
+    </section>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h1 style="font-size:75px; text-align: center;" class="heading">about us</h1>
+        <br><br>
+        <div class="row">
+            <div class="image">
+                <img src="/static/about-img.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">what's make our coffee special!</h3>
+                <p>The special quality of coffee in our café lies in the meticulous selection of premium beans sourced
+                    from renowned coffee regions. Our expert baristas skillfully craft each cup, ensuring precision in
+                    brewing and highlighting the unique flavor profiles of the beans. The commitment to freshness and a
+                    dedication to the art of coffee preparation create an unparalleled experience for coffee
+                    enthusiasts.</p>
+                <a style="padding: 10px; background-color: rgb(181, 149, 108); color: white; border-radius: 5px;"
+                    href="#" class="btn">read more</a>
+                <div class="icons-container">
+                    <div class="icons">
+                        <img src="/static/about-icon-1.png" alt="">
+                        <h3>quality coffee</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="/static/about-icon-2.png" alt="">
+                        <h3>our branches</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="/static/about-icon-3.png" alt="">
+                        <h3>free delivery</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- REVIEW -->
+    <section class="review" id="review">
+        <h1 style="font-size:75px; text-align: center;" class="heading">reviews</h1>
+
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-quote-right"></i>
+                    <img src="/static/pic-1.png" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Very good freshly brewed coffee.It was aromatic and had a very rich flavour.</p>
+                    <h3>K SREE HARSHA</h3>
+                    <span>satisfied client</span>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+    </section>
+    <script>
+        let menu = document.querySelector('#menu-btn');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        };
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+        };
+
+        document.querySelectorAll('.image-slider img').forEach(images => {
+            images.onclick = () => {
+                var src = images.getAttribute('src');
+                document.querySelector('.main-home-image').src = src;
+            };
+        });
+
+        var swiper = new Swiper(".review-slider", {
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 7500,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                768: {
+                    slidesPerView: 2
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

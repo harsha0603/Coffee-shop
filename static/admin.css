@@ -1,0 +1,65 @@
+body {
+    background-color: #f4f0e1;  /* Light brown background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #634032;  /* Dark brown header text */
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #634032;  /* Dark brown navigation background */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #f4f0e1;  /* Light brown navigation text */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #634032;  /* Dark brown navigation background on hover */
+}
+
+h2 {
+    color: #634032;  /* Dark brown section header text */
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #634032;  /* Dark brown table borders */
+    padding: 10px;
+    text-align: left;
+}
+
+button {
+    background-color: #634032;  /* Dark brown button background */
+    color: #f4f0e1;  /* Light brown button text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3d2719;  /* Darker brown button background on hover */
+}

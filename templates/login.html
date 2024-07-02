@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="/static/login.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+</head>
+<body>
+    <section>
+        <div class="form">
+    <h1 style="font-size: 50px;"><span style="color: darkgoldenrod;">Admin</span> Login</h1>
+    <br>
+    <form method="post" action="{{ url_for('login') }}">
+        <label style="font-size: 20px; font-weight: bolder;" for="username">Username:</label>
+        <input style="padding: 5px; border-radius: 5px; width: 200px;" type="text" name="username" required><br>
+        <br>
+        <label style="font-size: 20px; font-weight: bolder;" for="password">Password:</label>
+        <input style="padding: 5px; border-radius: 5px; width: 200px;" type="password" name="password" required><br>
+        <br>
+        <input style="background-color: rgb(139, 109, 69); color: white; font-weight: 700; border: none; padding: 10px 40px; border-radius: 10px; text-align: center; margin-left: 7%;" type="submit" value="Login">
+    </div>
+    </form>
+</section>
+</body>
+</html>

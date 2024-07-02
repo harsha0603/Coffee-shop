@@ -1,0 +1,45 @@
+/* orders.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: transparent;
+    color: rgb(181, 144, 95);
+    text-align: left;
+    padding: 1em;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #9b7758;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #9b7758;
+}
+
+a:hover {
+    color: #634831;
+}
